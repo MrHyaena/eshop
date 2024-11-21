@@ -1,5 +1,5 @@
 import app from "./App.module.css";
-import logo from "public/assets/logo.png";
+import logo from "/home/hyaena/repos/eshop/public/assets/logo.png";
 
 function App() {
   return (
