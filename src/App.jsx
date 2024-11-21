@@ -1,11 +1,12 @@
 import app from "./App.module.css";
 import logo from "/src/assets/logo.png";
+import backVideo from "/src/assets/mainVideo.mp4";
 
 function App() {
   return (
     <>
       <video autoPlay muted loop className={app.mainVideo}>
-        <source src="src/assets/mainVideo.mp4"></source>
+        <source src={backVideo}></source>
       </video>
       <div className={app.wrapper}>
         <div className={app.header}>
