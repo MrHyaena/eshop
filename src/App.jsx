@@ -1,4 +1,5 @@
 import app from "./App.module.css";
+import logo from "public/assets/logo.png";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       </video>
       <div className={app.wrapper}>
         <div className={app.header}>
-          <img src="public/logo.png" alt="logo" className={app.logoBar}></img>
+          <img src={logo.src} alt="logo" className={app.logoBar}></img>
           <div className={app.navBar}>
             <a href="https://www.google.com/" className={app.aNav}>
               Handguns
@@ -18,11 +19,7 @@ function App() {
           </div>
         </div>
         <div className={app.panel}>
-          <img
-            src="src/assets/logo.png"
-            alt="logo"
-            className={app.mainImg}
-          ></img>
+          <img src={logo} alt="logo" className={app.mainImg}></img>
           <h2>Girl! You want to be truly independent?</h2>
 
           <h1>Pick your own gun!</h1>
