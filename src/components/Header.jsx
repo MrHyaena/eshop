@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Header.css";
+import "./Components.css";
 
 function Header() {
   return (
@@ -7,9 +7,9 @@ function Header() {
       <div className="header">
         <img src="src/assets/logo.png" alt="logo" className="logoBar"></img>
         <div className="navBar">
-          <button>Home</button>
-          <button>Shop</button>
-          <button>Courses</button>
+          <a href="https://www.google.com/">Home</a>
+          <a>Shop</a>
+          <a>Courses</a>
         </div>
         <div id="cart">Cart</div>
       </div>

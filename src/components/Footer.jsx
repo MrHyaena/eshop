@@ -1,13 +1,13 @@
 import { useState } from "react";
-import "./Footer.css";
+import "./Components.css";
 
 function Footer() {
   return (
     <>
       <div className="footerBar">
-        <button>Home</button>
-        <button>Shop</button>
-        <button>Courses</button>
+        <a>Home</a>
+        <a>Shop</a>
+        <a>Courses</a>
       </div>
     </>
   );

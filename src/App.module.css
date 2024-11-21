@@ -1,0 +1,169 @@
+body {
+  margin: 0px;
+  --color-one: #de7c7d;
+  --color-two: #ce1361;
+  --color-three: #740938;
+  --light-text: rgb(243, 243, 243);
+  --dark-text: rgb(14, 14, 14);
+  font-family: fantasy;
+}
+
+.mainVideo {
+  position: fixed;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.mainButton {
+  background-color: var(--color-two);
+  font-size: 30px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 10px;
+  box-shadow: 0px 0px 3px black;
+  font-family: fantasy;
+  transition: transform 1s;
+  color: white;
+}
+
+.mainButton:hover {
+  transform: scale(1.2);
+}
+
+.mainImg {
+  max-width: 150px;
+  height: auto;
+  animation: bounce alternate infinite 2s ease-in-out;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-10%);
+  }
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.panel h1 {
+  font-size: 60px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  transform: rotate(5deg);
+  text-align: center;
+  animation: pop infinite alternate 2s ease-in-out;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+.panel h2 {
+  text-align: center;
+  font-size: 30px;
+  color: var(--color-two);
+  margin-bottom: 20px;
+}
+
+.wrapper {
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(233, 233, 233, 0.705);
+}
+
+.footerBar {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0px;
+}
+
+.header {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.699);
+}
+
+.cart {
+  display: none;
+}
+
+.navBar {
+  display: flex;
+  gap: 10px;
+}
+
+.logoBar {
+  width: 50px;
+  display: none;
+}
+
+.aNav,
+.aFoot {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--dark-text);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.5s;
+}
+
+.aNav:hover {
+  color: var(--color-two);
+  transition: color 0.5s;
+}
+
+.aFoot:hover {
+  color: var(--color-two);
+  transition: color 0.5s;
+}
+
+@media (min-width: 800px) {
+  .header {
+    padding: 10px 200px;
+    justify-content: space-between;
+  }
+  .navBar a {
+    font-size: 30px;
+  }
+
+  .navBar {
+    gap: 40px;
+  }
+
+  .footerBar {
+    gap: 40px;
+  }
+
+  .logoBar,
+  .cart {
+    display: block;
+  }
+}
