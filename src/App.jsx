@@ -1,15 +1,15 @@
 import app from "./App.module.css";
-import logo from "/home/hyaena/repos/eshop/public/assets/logo.png";
+import logo from "/src/assets/logo.png";
 
 function App() {
   return (
     <>
       <video autoPlay muted loop className={app.mainVideo}>
-        <source src="public/mainVideo.mp4"></source>
+        <source src="src/assets/mainVideo.mp4"></source>
       </video>
       <div className={app.wrapper}>
         <div className={app.header}>
-          <img src={logo.src} alt="logo" className={app.logoBar}></img>
+          <img src={logo} alt="logo" className={app.logoBar}></img>
           <div className={app.navBar}>
             <a href="https://www.google.com/" className={app.aNav}>
               Handguns
