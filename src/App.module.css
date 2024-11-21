@@ -62,7 +62,7 @@ body {
   margin-bottom: 15px;
   transform: rotate(5deg);
   text-align: center;
-  animation: pop infinite alternate 2s ease-in-out;
+  animation: pop infinite alternate 1.2s ease-in-out;
 }
 
 @keyframes pop {
@@ -71,7 +71,7 @@ body {
   }
 
   to {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1) rotate(3deg);
   }
 }
 
@@ -158,6 +158,14 @@ body {
     gap: 40px;
   }
 
+  .panel h1 {
+    font-size: 100px;
+  }
+
+  .panel h2 {
+    font-size: 40px;
+  }
+
   .footerBar {
     gap: 40px;
   }
@@ -165,5 +173,17 @@ body {
   .logoBar,
   .cart {
     display: block;
+  }
+
+  .mainImg {
+    max-width: 300px;
+  }
+
+  .mainButton {
+    font-size: 60px;
+  }
+
+  .panel {
+    margin-bottom: 50px;
   }
 }

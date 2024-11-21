@@ -1,6 +1,3 @@
-import { useState } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import app from "./App.module.css";
 
 function App() {
@@ -30,9 +27,9 @@ function App() {
             alt="logo"
             className={app.mainImg}
           ></img>
-          <h2>You want to be truly independent?</h2>
+          <h2>Girl! You want to be truly independent?</h2>
 
-          <h1>Guns for ladies!</h1>
+          <h1>Pick your own gun!</h1>
 
           <button className={app.mainButton}>Let's go shopping!</button>
         </div>
