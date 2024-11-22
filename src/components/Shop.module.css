@@ -1,3 +1,15 @@
+.wrapper {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 100px 1fr;
+}
+
 .hello {
   color: green;
+}
+
+.board {
+  background-color: grey;
+  grid-column: 2 / 3;
 }

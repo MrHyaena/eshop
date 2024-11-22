@@ -1,0 +1,18 @@
+.logoBar {
+  width: 50px;
+}
+
+.navBar {
+  display: flex;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: start;
+  padding: 10px 40px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  border-right: 1px solid black;
+}

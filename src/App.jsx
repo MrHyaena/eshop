@@ -24,8 +24,9 @@ function App() {
           <h2>Girl! You want to be truly independent?</h2>
 
           <h1>Pick your own gun!</h1>
-
-          <button className={app.mainButton}>Let's go shopping!</button>
+          <a href="shop">
+            <button className={app.mainButton}>Let's go shopping!</button>
+          </a>
         </div>
         <div className={app.footerBar}>
           <a className={app.aFoot}>License</a>
