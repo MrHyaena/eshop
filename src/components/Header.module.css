@@ -4,8 +4,22 @@ body {
   --color-two: #ce1361;
   --color-three: #740938;
   --light-text: rgb(243, 243, 243);
-  --dark-text: rgb(14, 14, 14);
+  --dark-text: rgb(73, 73, 73);
   font-family: fantasy;
+}
+
+.header {
+  min-width: 100vw;
+  position: fixed;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  box-shadow: 0px 0px 4px rgb(206, 206, 206);
+  grid-column: 1 / 3;
+  z-index: 2;
+  background-color: rgb(243, 243, 243);
 }
 
 .logoBar {
@@ -13,28 +27,46 @@ body {
 }
 
 .navBar {
-  display: flex;
+  display: none;
   gap: 50px;
 }
 
 .a {
   font-size: 20px;
-  color: black;
+  color: var(--dark-text);
   text-decoration: none;
   transition: color 500ms;
+}
+
+.menuControl {
+  font-size: 40px;
+  margin: 0px;
+  color: var(--light-text);
+  border: none;
+  padding: none;
+  background-color: var(--color-three);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.mobileMenu {
+  display: none;
 }
 
 .a:hover {
   color: var(--color-two);
 }
 
-.header {
-  display: flex;
-  box-sizing: border-box;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 40px;
-  box-shadow: 0px 0px 4px black;
-  grid-column: 1 / 3;
-  z-index: 2;
+@media (min-width: 800px) {
+  .navBar {
+    display: flex;
+  }
+
+  .menuControl {
+    display: none;
+  }
 }

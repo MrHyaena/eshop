@@ -1,7 +1,26 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
 
-export function Header() {
+export function Header({ cart }) {
+  let cartLength = cart.length;
+  console.log(cartLength);
+
+  const [mobileMenu, setMobileMenu] = useState(0);
+
+  function changeClassNav() {
+    const mMenu = document.getElementById("mobileMenu");
+
+    if (mobileMenu == 0) {
+      mMenu.classList.remove("_mobileMenu_1nfx3_56");
+      mMenu.classList.add("mobileMenuOpen");
+      setMobileMenu(1);
+    } else {
+      mMenu.classList.remove("mobileMenuOpen");
+      mMenu.classList.add("_mobileMenu_1nfx3_56");
+      setMobileMenu(0);
+    }
+  }
+
   return (
     <>
       <div className={styles.header}>
@@ -12,12 +31,24 @@ export function Header() {
         ></img>
         <div className={styles.navBar}>
           <a href="https://www.google.com/" className={styles.a}>
-            Home
+            Handguns
           </a>
-          <a className={styles.a}>Shop</a>
-          <a className={styles.a}>Courses</a>
+          <a className={styles.a}>Rifles</a>
+          <a className={styles.a}>Ammunition</a>
         </div>
-        <div id="cart">Cart</div>
+        <button class={styles.menuControl} onClick={changeClassNav}>
+          =
+        </button>
+        <div className={styles.mobileMenu} id="mobileMenu">
+          <a href="https://www.google.com/" className={styles.a}>
+            Handguns
+          </a>
+          <a className={styles.a}>Rifles</a>
+          <a className={styles.a}>Ammunition</a>
+        </div>
+        <div id={styles.cart}>
+          <a className={styles.a}> Cart: {cartLength} </a>
+        </div>
       </div>
     </>
   );

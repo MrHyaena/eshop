@@ -14,6 +14,7 @@ function Shop() {
     "https://raw.githubusercontent.com/pubg/api-assets/master/Assets/Item/Weapon/Handgun/Item_Weapon_Rhino_C_h.png",
     "https://raw.githubusercontent.com/pubg/api-assets/master/Assets/Item/Weapon/Handgun/Item_Weapon_Sawnoff_C_h.png",
   ]);
+  const [cart, setCart] = useState([]);
 
   //useEffect(() => {
   //  fetch(
@@ -27,16 +28,14 @@ function Shop() {
   //    .then((response) => setGuns(response))
   //    .then(() => console.log([guns]))
   //    .catch((error) => console.error(error));
-  //}, []);
+  //}, []);  <Items guns={guns} />
 
   return (
     <>
       <div className={styles.wrapper}>
-        <Header className={styles.header} />
+        <Header className={styles.header} cart={cart} />
         <div className={styles.board}></div>
         <Sidebar />
-
-        <Items guns={guns} />
       </div>
     </>
   );
