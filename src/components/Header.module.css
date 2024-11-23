@@ -25,11 +25,13 @@ body {
 
 .logoBar {
   max-height: 50px;
+  justify-self: center;
 }
 
 .navBar {
   display: none;
   gap: 50px;
+  justify-self: center;
 }
 
 .a {
@@ -41,6 +43,11 @@ body {
 
 .a:hover {
   color: var(--color-two);
+}
+
+#cart {
+  display: flex;
+  justify-content: center;
 }
 
 .aToggle {
