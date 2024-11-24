@@ -1,38 +1,22 @@
 .mobileMenu {
-  display: flex;
-  flex-direction: column;
-  grid-row: 2 / 3;
-  grid-column: 1 / 4;
-  justify-self: center;
-  text-align: center;
-  gap: 10px;
-  margin-top: 0px;
-  transform: scaleY(0);
-  height: 0px;
-  transition: scale 1s;
+  display: none;
 }
 
 .mobileMenuToggle {
+  position: absolute;
+  top: 70px;
   display: flex;
   flex-direction: column;
-  grid-row: 2 / 3;
-  grid-column: 1 / 4;
-  justify-self: center;
-  text-align: center;
-  gap: 10px;
-  margin-top: 20px;
-  transform: scaleY(1);
-  transition: scale 1s;
+  animation: show 200ms ease-in-out forwards;
+  transform-origin: top;
 }
 
 @keyframes show {
   from {
-    display: none;
-    transform: scale(0);
+    transform: scaleY(0);
   }
 
   to {
-    display: flex;
-    transform: scale(1);
+    transform: scaleY(1);
   }
 }

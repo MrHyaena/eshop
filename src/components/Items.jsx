@@ -8,8 +8,20 @@ export function Items({ guns }) {
 
     if (arrayControl[arrayControl.length - 5] === "h") {
       return (
-        <div>
-          <img src={url}></img>
+        <div className={styles.card}>
+          <img src={url} className={styles.img}></img>
+          <div className={styles.gunInfo}>
+            <h3>Gun</h3>
+            <h5>Info:</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              ipsum illum illo perferendis quod magnam consequatur facere esse
+              expedita. Cumque ea distinctio inventore, sed officiis commodi et
+              soluta voluptas officia!
+            </p>
+            <h4>{Math.floor(Math.random() * 1000)} USD</h4>
+            <button>Add to cart</button>
+          </div>
         </div>
       );
     }

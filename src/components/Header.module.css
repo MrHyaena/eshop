@@ -5,7 +5,6 @@ body {
   --color-three: #740938;
   --light-text: rgb(243, 243, 243);
   --dark-text: rgb(73, 73, 73);
-  font-family: fantasy;
 }
 
 .header {
@@ -57,6 +56,11 @@ body {
   transition: color 500ms;
   background-color: rgb(243, 243, 243);
   width: 100vw;
+  padding: 20px;
+}
+
+.aToggle:hover {
+  color: var(--color-two);
 }
 
 .menuControl {

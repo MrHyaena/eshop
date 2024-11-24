@@ -34,8 +34,9 @@ function Shop() {
     <>
       <div className={styles.wrapper}>
         <Header className={styles.header} cart={cart} />
-        <div className={styles.board}></div>
-        <Sidebar />
+        <div className={styles.board}>
+          <Items guns={guns} />
+        </div>
       </div>
     </>
   );
