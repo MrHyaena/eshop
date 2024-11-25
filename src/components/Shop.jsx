@@ -24,17 +24,21 @@ function Shop() {
       .catch((error) => console.error(error));
   }, []);
 
-  function addToCart(item) {
+  function addToCart(item, amount) {
     const newArray = cart;
-    newArray.push(item);
+    for (let i = 0; i < amount; i++) {
+      newArray.push(item);
+    }
+
     setCart(newArray);
+    console.log(cart);
     setCartl(newArray.length);
 
     const filteredArray = filtered;
 
-    const controlArray = cart.filter((gun) => gun.name == item.name);
+    const controlArray = filtered.filter((gun) => gun.name == item.name);
 
-    if (controlArray.length < 2) {
+    if (controlArray.length < 1) {
       filteredArray.push(item);
       setFiltered(filteredArray);
     }
@@ -61,17 +65,17 @@ function Shop() {
     <>
       <div className={styles.wrapper}>
         <Header className={styles.header} cart={cart} cartl={cartl} />
-        <div id="cart" class="cart">
+        <div id="cart" class="cart" key="cart">
           <h4>Your cart:</h4>
-          {filtered.map((item) => {
+          {filtered.map((item, index) => {
             const countArray = cart.filter((gun) => gun.name == item.name);
             let count = countArray.length;
 
             return (
               <>
-                <div>
+                <div key={"card" + index + 1}>
                   <h5>{item.name}</h5>
-                  <h5>Price: {Math.floor(Math.random() * 1000)}</h5>
+                  <h5>Price: {Math.floor(Math.random() * 1000) * count}</h5>
                   <h5>Count: {count}</h5>
                   <button
                     onClick={() => {

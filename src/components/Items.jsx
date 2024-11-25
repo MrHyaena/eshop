@@ -1,6 +1,8 @@
 import styles from "./Items.module.css";
+import { useEffect, useState } from "react";
 
 export function Items({ guns, addToCart }) {
+  const [amount, setAmount] = useState(1);
   let images = guns.map((gun, index) => {
     let url = gun.download_url;
     const arrayControl = url.split("");
@@ -19,13 +21,22 @@ export function Items({ guns, addToCart }) {
               soluta voluptas officia!
             </p>
             <h4>{Math.floor(Math.random() * 1000)} USD</h4>
-            <button
-              onClick={() => {
-                addToCart(gun);
-              }}
-            >
-              Add to cart
-            </button>
+            <div>
+              <input
+                type="number"
+                onChange={(e) => {
+                  setAmount(e.target.value);
+                  console.log(amount);
+                }}
+              ></input>
+              <button
+                onClick={() => {
+                  addToCart(gun, amount);
+                }}
+              >
+                Add to cart
+              </button>
+            </div>
           </div>
         </div>
       );
