@@ -1,11 +1,9 @@
 import { useState } from "react";
 import styles from "./Header.module.css";
+import board from "./Shop.module.css";
 import "./toggle.css";
 
-export function Header({ cart }) {
-  let cartLength = cart.length;
-  console.log(cartLength);
-
+export function Header({ cart, cartl }) {
   const [mobileMenu, setMobileMenu] = useState(0);
 
   function mobileMenuState() {
@@ -17,17 +15,15 @@ export function Header({ cart }) {
     }
   }
 
-  function ChangeClassNav() {
-    if (mobileMenu == 1) {
-      return (
-        <div className={styles.mobileMenu} id="mobileMenu">
-          <a href="https://www.google.com/" className={styles.aToggle}>
-            Handguns
-          </a>
-          <a className={styles.aToggle}>Rifles</a>
-          <a className={styles.aToggle}>Ammunition</a>
-        </div>
-      );
+  function showCart() {
+    const cart = document.querySelector("#cart");
+    const board = document.querySelector("#board");
+    if (cart.className === "cart") {
+      cart.setAttribute("class", "cartToggle");
+      board.setAttribute("class", "boardOff");
+    } else {
+      cart.setAttribute("class", "cart");
+      board.setAttribute("class", "board");
     }
   }
 
@@ -58,7 +54,10 @@ export function Header({ cart }) {
         </div>
 
         <div id={styles.cart}>
-          <a className={styles.a}> Cart: {cartLength} </a>
+          <a className={styles.cartbtn} onClick={showCart}>
+            {" "}
+            Cart: {cartl}{" "}
+          </a>
         </div>
       </div>
     </>

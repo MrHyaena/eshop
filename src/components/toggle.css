@@ -11,6 +11,23 @@
   transform-origin: top;
 }
 
+.cart {
+  display: none;
+}
+
+.cartToggle {
+  display: block;
+  margin-top: 70px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.boardOff {
+  display: none;
+}
+
 @keyframes show {
   from {
     transform: scaleY(0);

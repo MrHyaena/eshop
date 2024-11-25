@@ -1,14 +1,13 @@
 import styles from "./Items.module.css";
 
-export function Items({ guns }) {
-  let images = guns.map((gun) => {
-    let url = gun;
-
-    let arrayControl = url.split("");
+export function Items({ guns, addToCart }) {
+  let images = guns.map((gun, index) => {
+    let url = gun.download_url;
+    const arrayControl = url.split("");
 
     if (arrayControl[arrayControl.length - 5] === "h") {
       return (
-        <div className={styles.card}>
+        <div className={styles.card} key={gun + index}>
           <img src={url} className={styles.img}></img>
           <div className={styles.gunInfo}>
             <h3>Gun</h3>
@@ -20,7 +19,13 @@ export function Items({ guns }) {
               soluta voluptas officia!
             </p>
             <h4>{Math.floor(Math.random() * 1000)} USD</h4>
-            <button>Add to cart</button>
+            <button
+              onClick={() => {
+                addToCart(gun);
+              }}
+            >
+              Add to cart
+            </button>
           </div>
         </div>
       );
